@@ -1,0 +1,56 @@
+
+[
+    [
+        {
+            "id": 1,
+            "nombre": "masbe",
+            "precio": 13000,
+            "descripcion": "Deliciosa hamburguesa clásica con carne 100% de res.",
+            "image": "productos/masbe.jpg"
+        },
+        {
+            "id": 2,
+            "nombre": "tortimasbe",
+            "precio": 13000,
+            "descripcion": "Deliciosa hamburguesa clásica con carne 100% de res.",
+            "image": "productos/tortimasbe.jpg"
+        },
+        {
+            "id": 3,
+            "nombre": "fantasma",
+            "precio": 17000,
+            "descripcion": "Deliciosa hamburguesa clásica con carne 100% de res.",
+            "image": "productos/fantasma.jpg"
+        },
+        {
+            "id": 4,
+            "nombre": "chicharronbe",
+            "precio": 20000,
+            "descripcion": "Deliciosa hamburguesa clásica con carne 100% de res.",
+            "image": "productos/chicharronbe.jpg"
+        },
+        {
+            "id": 5,
+            "nombre": "madurita",
+            "precio": 20000,
+            "descripcion": "Deliciosa hamburguesa clásica con carne 100% de res.",
+            "image": "productos/madurita.jpg"
+        }
+    ],
+    [
+        {
+            "id": 1,
+            "nombre": "papasbep",
+            "precio": 14000,
+            "descripcion": "Papas fritas con toppings especiales.",
+            "image": "productos/papas.jpg"
+        },
+        {
+            "id": 2,
+            "nombre": "megapapasbe",
+            "precio": 24000,
+            "descripcion": "Papas fritas con toppings especiales.",
+            "image": "productos/megapapasbe.jpg"
+        }
+    ]
+]

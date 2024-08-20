@@ -1,0 +1,272 @@
+:root{
+    --gris:#262323;
+    --verde:rgb(117, 250, 0);
+    --fondos:rgba(0, 0, 0, 0.662);
+}
+
+@font-face {
+    font-family:titulo;
+    src: url(fonts/AldotheApache.ttf);
+}
+
+@font-face {
+    font-family:familyb;
+    src: url(fonts/AldotheApache.ttf);
+}
+
+@font-face {
+    font-family:texto;
+    src: url(fonts/novamono.ttf);
+}
+
+body{
+    background-color:var(--gris);
+    color:white;
+}
+
+header{
+    margin:2vw;
+    background-color: rgba(0, 0, 0, 0.662);
+    display:grid;
+    grid-template-columns:50% 50%;
+    align-items: center;
+    padding:1vw 2vw 1vw 2vw;
+    border-radius:2vw 2vw 0vw 0vw;
+}
+
+#img-header{
+    display: flex;
+    justify-content: center;
+    font-size:2vw;
+    color: var(--verde);
+    font-family:familyb;
+    letter-spacing:0.5vw;
+}
+
+#btn-nav img{
+    width:4vw;
+    height:4vw;
+}
+
+#btn-nav{
+    display: flex;
+    flex-direction: row;
+    column-gap:3vw;
+    justify-content: center;
+    border-left:0.1vw solid var(--verde);
+}
+
+main{
+    margin:2vw;
+    background-color:var(--fondos);
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding:1vw 2vw 1vw 2vw;
+    border-radius: 2vw;
+}
+
+#btn_filtro{
+    display:flex;
+    column-gap:2vw;
+    width:84%;
+    padding:2vw;
+}
+
+#btn_filtro button{
+    width:70%;
+    height:5vw;
+    justify-content: center;
+    background-color: black;
+    color: var(--verde);
+    border:0.1vw solid var(--verde);
+    border-radius:1vw;
+    font-size:2vw;
+    font-family:titulo;
+}
+
+
+#btn_filtro button:hover{
+    background-color:var(--verde);
+    color: black;
+}
+
+hr{
+    background-color: var(--verde);
+    border:0;
+    height:0.1vw;
+    margin:2vw;
+}
+
+#btn-nav a{
+    padding:1vw;
+}
+
+#btn-nav a:hover{
+    background-color: var(--verde);
+    border-radius:1vw;
+    border:0.2vw solid white;
+}
+
+
+.card-info h3,h4{
+    font-family:titulo;
+    letter-spacing:0.1vw;
+}
+
+.card-info p{
+    font-family: texto;
+}
+
+
+#productos{
+    display: flex;
+    flex-direction: row ;
+    flex-wrap:wrap;
+    column-gap:2vw;
+    row-gap:2vw;
+    padding:1vw;
+    justify-content: center;
+}
+
+.prod{
+    border:0.1vw solid var(--verde);
+    border-radius:2vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom:1vw;
+}
+
+.card{
+    border-radius:2vw;
+    padding:2vw;
+    padding-top:3vw;
+    width:15vw;
+    height:18vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size:1.5vw;
+    flex-wrap:nowrap;
+}
+
+.card img{
+    width:15vw;
+    height:15vw;
+    border-radius:2vw;
+}
+
+.card div{
+    position: absolute;
+    width:1vw;
+    height:15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition:1s;
+}
+
+.añadir_carrito{
+    border:0.2vw solid white;
+    border-radius:1vw;
+    background-color: rgba(255, 255, 255, 0);
+    padding:0.5vw;
+}
+
+.añadir_carrito img{
+    width:3vw;
+    height:3vw;
+}
+
+.añadir_carrito:hover{
+    background-color: var(--verde);
+    border-radius:1vw;
+    border:0.2vw solid white;
+}
+
+.card .frente{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+.card .atras{
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.card:hover .frente{
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.card:hover .atras{
+    transform: perspective(500px) rotateY(360deg);
+}
+
+@media (max-width: 767px) {
+    #img-header{
+        font-size:6vw;
+    }
+
+    #btn-nav img{
+        width:9vw;
+        height:9vw;
+    }
+
+    #btn_filtro button{
+        font-size:6vw;
+        padding:2vw;
+        height:100%;
+    }
+
+    #btn_filtro{
+        width:100%;
+    }
+
+    #productos{
+        display:flex;
+        flex-direction: row;
+        width:100%;
+    }
+
+    .card{
+        width:43%;
+        height:50vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card .frente{
+        width:43%;
+        height:50vw;
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .card .atras{
+        font-size:3.5vw;
+    }
+
+    .card img{
+        width:35vw;
+        height:35vw;
+    }
+
+    .card-info{
+        font-size:5vw;
+    }
+
+    .prod{
+        width: 43%;
+    }
+
+    .añadir_carrito img{
+        width:7vw;
+        height:7vw;
+    }
+}
+

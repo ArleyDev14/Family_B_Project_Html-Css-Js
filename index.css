@@ -1,0 +1,323 @@
+:root{
+    --gris:#262323;
+    --verde:rgb(117, 250, 0);
+    --fondos:rgba(0, 0, 0, 0.662);
+}
+
+@font-face {
+    font-family:titulo;
+    src: url(fonts/AldotheApache.ttf);
+}
+
+@font-face {
+    font-family:familyb;
+    src: url(fonts/AldotheApache.ttf);
+}
+
+@font-face {
+    font-family:texto;
+    src: url(fonts/novamono.ttf);
+}
+
+body{
+    background-color:var(--gris);
+    color:white;
+}
+
+header{
+    margin:2vw;
+    background-color: rgba(0, 0, 0, 0.662);
+    display:grid;
+    grid-template-columns:50% 50%;
+    align-items: center;
+    padding:1vw 2vw 1vw 2vw;
+    border-radius:2vw 2vw 0vw 0vw;
+}
+
+#img-header{
+    display: flex;
+    justify-content: center;
+    font-size:2vw;
+    color: var(--verde);
+    font-family:familyb;
+    letter-spacing:0.5vw;
+}
+
+#btn-nav img{
+    width:4vw;
+    height:4vw;
+}
+
+#btn-nav{
+    display: flex;
+    flex-direction: row;
+    column-gap:3vw;
+    justify-content: center;
+    border-left:0.1vw solid var(--verde);
+}
+
+#btn-nav a{
+    padding:1vw;
+}
+
+#btn-nav a:hover{
+    background-color: var(--verde);
+    border-radius:1vw;
+    border:0.2vw solid white;
+}
+
+main{
+    margin:2vw;
+    background-color:var(--fondos);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:1vw 2vw 1vw 2vw;
+    border-radius: 2vw;
+}
+
+main h1{
+    font-family:titulo;
+    letter-spacing:0.5vw;
+}
+
+hr{
+    background-color: var(--verde);
+    border:0;
+    height:0.1vw;
+    margin:2vw;
+}
+
+#info_empresa{
+    background-color: var(--fondos);
+    margin: 2vw;
+    padding:2vw;
+    padding-bottom:3vw;
+    border-radius:2vw;
+    display:grid;
+    grid-template-columns:50% 50%;
+    font-family:texto;
+    font-size:3vw;
+    text-align: center;
+}
+
+#info_empresa button{
+    background-color:var(--fondos);
+    color: var(--verde);
+    border: 0.1vw solid var(--verde);
+    padding:1vw;
+    border-radius:2vw;
+    font-family:titulo;
+    font-size:2vw;
+}
+
+#info_empresa button:hover{
+    background-color: var(--verde);
+    color:black;
+}
+
+.card-info h3,h4{
+    font-family:titulo;
+    letter-spacing:0.1vw;
+}
+
+.card-info p{
+    font-family: texto;
+}
+
+.carrusel{
+    display: flex;
+}
+
+#productos{
+    display: flex;
+    flex-direction: row ;
+    flex-wrap:wrap;
+    column-gap:2vw;
+    row-gap:2vw;
+    padding:1vw;
+    justify-content: center;
+}
+
+.prod{
+    border:0.1vw solid var(--verde);
+    border-radius:2vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom:1vw;
+}
+
+.card{
+    border-radius:2vw;
+    padding:2vw;
+    padding-top:3vw;
+    width:15vw;
+    height:18vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size:1.5vw;
+    flex-wrap:nowrap;
+}
+
+.card img{
+    width:15vw;
+    height:15vw;
+    border-radius:2vw;
+}
+
+.card div{
+    position: absolute;
+    width:1vw;
+    height:15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition:1s;
+}
+
+.añadir_carrito{
+    border:0.2vw solid white;
+    border-radius:1vw;
+    background-color: rgba(255, 255, 255, 0);
+    padding:0.5vw;
+}
+
+.añadir_carrito img{
+    width:3vw;
+    height:3vw;
+}
+
+.añadir_carrito:hover{
+    background-color: var(--verde);
+    border-radius:1vw;
+    border:0.2vw solid white;
+}
+
+.card .frente{
+    transform: perspective(500px) rotateY(0deg);
+}
+
+.card .atras{
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.card:hover .frente{
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.card:hover .atras{
+    transform: perspective(500px) rotateY(360deg);
+}
+
+
+
+@media (max-width: 767px) {
+    #img-header{
+        font-size:6vw;
+    }
+
+    #btn-nav img{
+        width:9vw;
+        height:9vw;
+    }
+
+    #productos{
+        display: flex;
+        flex-wrap: nowrap;
+        column-gap:2vw;
+        row-gap:2vw;
+        padding:1vw;
+        justify-content: center;
+    }
+
+    .carrusel{
+        display: flex;
+        position: relative;
+        align-items: center;
+        width:fit-content;
+        max-width:90vw;
+        overflow: scroll;
+        float: left;
+    }
+
+    .card{
+        width:30vw;
+        height:40vw;
+        font-size:5vw;
+    }
+
+    .atras{
+        font-size:4vw;
+    }
+
+    .card img{
+        width:25vw;
+        height:25vw;
+    }
+
+    .añadir_carrito{
+        width:8vw;
+        height:8vw;
+    }
+
+    .añadir_carrito img{
+        width:100%;
+        height:100%;
+    }
+
+    #info_empresa{
+        font-size:7vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #info_empresa button{
+        font-size:7vw;
+    }
+}
+
+
+
+.tarjeta{
+    position: relative;
+    width: 300px;
+    height:400px;
+}
+
+.tarjeta div{
+    position: absolute;
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition:1s;
+}
+
+.tarjeta .frente{
+    background-color: aqua;
+    transform: perspective(500px) rotateY(0deg);
+}
+
+.tarjeta .atras{
+    background-color: rgb(0, 255, 76);
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.tarjeta:hover .frente{
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.tarjeta:hover .atras{
+    transform: perspective(500px) rotateY(360deg);
+}
